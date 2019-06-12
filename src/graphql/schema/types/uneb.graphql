@@ -1,0 +1,5 @@
+type UnebSummary {
+    id: Int!
+    number: Int!
+    exam_year: String!
+}

@@ -1,0 +1,28 @@
+#import User    from './types/user.graphql'
+#import Roles    from './types/roles.graphql'
+#import UserRole    from './types/usersroles.graphql'
+#import District from './types/districts.graphql'
+#import School from './types/schools.graphql'
+#import UnebSummary from './types/uneb.graphql'
+
+type Query {
+    allUsers: [User]
+    allRoles: [Role]
+    allUsersRoles: [UserRole]
+    eachUserRoles(user_id: Int!): [UserRole]
+    allDistricts: [District]
+    districtById(id: Int!): [District]
+    allSchools: [School]
+    secondarySchoolsPerDistrict(district_id: Int!): [SchoolsPerDistrict]
+    primarySchoolsPerDistrict(district_id: Int!): [SchoolsPerDistrict]
+    unebSummaryBySchoolIdAndGrade(school_id: Int!, grade: Int!, start_year: String!, end_year: String!): [UnebSummary]
+    populationBySchoolIdAndYear(school_id: Int!, active_year: String!): [Population]
+    
+}
+
+type Mutation {
+  register(username: String!, email:String!, password: String!): User
+  login(email: String!, password: String!): User
+  addRole(name: String!, description: String): Role
+  addUserRole(user_id: Int!, role_id: Int!): UserRole
+}

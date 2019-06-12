@@ -1,0 +1,21 @@
+type School {
+    id: Int!
+    category_id: String!
+    name: String!
+    address: String
+    mixed: String
+    boarding: String
+    district: String
+}
+
+type SchoolsPerDistrict {
+    id: Int!
+    name: String!
+    district: String
+}
+
+type Population {
+    class_id: Int!
+    class_name: String!
+    population: Int!
+}

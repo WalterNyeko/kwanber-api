@@ -1,0 +1,5 @@
+type District {
+    id: Int!
+    name: String!
+    description: String
+}
