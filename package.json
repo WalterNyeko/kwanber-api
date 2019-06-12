@@ -1,0 +1,27 @@
+{
+  "name": "kwanber-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.6.2",
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.0.0",
+    "graphql": "^14.3.1",
+    "graphql-import": "^0.7.1",
+    "graphql-type-datetime": "^0.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.6.5",
+    "mysql2-promise": "^0.1.4",
+    "nodemon": "^1.19.1",
+    "validator": "^11.0.0"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "author": "acholi-geeks",
+  "license": "ISC"
+}

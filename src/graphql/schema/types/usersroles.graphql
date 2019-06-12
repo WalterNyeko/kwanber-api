@@ -1,0 +1,4 @@
+type UserRole {
+    user_id: Int
+    role_id: Int
+}

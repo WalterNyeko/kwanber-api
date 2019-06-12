@@ -1,0 +1,18 @@
+#import User    from './types/user.graphql'
+#import Roles    from './types/roles.graphql'
+#import UserRole    from './types/usersroles.graphql'
+
+type Query {
+    allUsers: [User]
+    allRoles: [Role]
+    allUsersRoles: [UserRole]
+    eachUserRoles(user_id: Int!): [UserRole]
+    
+}
+
+type Mutation {
+  register(username: String!, email:String!, password: String!): User
+  login(email: String!, password: String!): User
+  addRole(name: String!, description: String): Role
+  addUserRole(user_id: Int!, role_id: Int!): UserRole
+}
